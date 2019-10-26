@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+          'Lucida Sans', Arial, sans-serif;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      main > a {
+        border: 1px solid #ccc;
+        margin: 0.3em;
+        padding: 1em;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main > a > p {
+        flex-grow: 2;
+      }
+
+      .tags {
+        margin-top: 1em;
+      }
+
+      .tag {
+        background-color: #ccc;
+        padding: 0.2em;
+        margin: 0.1em;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Library</h1>
+      <h2>Dashboard</h2>
+    </header>
+    <main>
+      <a
+        href="https://medium.com/@aleksandrasays/developing-vs-code-extensions-b6debc865a55"
+      >
+        <h1>Medium</h1>
+        <h2>Developing VS Code extensions</h2>
+        <p>
+          This article is based on the talk I gave at #1 Wrocław TypeScript
+          Meetup.
+        </p>
+        <div class="tags">
+          <span class="tag">
+            <span class="tag-name">Reading time</span>
+            <span class="tag-value">9 min read</span>
+          </span>
+          <span class="tag">
+            <span class="tag-name">Added on</span>
+            <span class="tag-value">Monday, October 14th, 2019</span>
+          </span>
+        </div>
+      </a>
+      <a
+        href="https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/"
+      >
+        <h1>Open Source Blog</h1>
+        <h2>
+          Announcing Dapr, an open source project to make it easier for every
+          developer to build microservice applications - Open Source Blog
+        </h2>
+        <p>
+          Dapr enables all developers using any language and any framework to
+          easily build portable microservices applications.
+        </p>
+        <div class="tags">
+          <span class="tag">
+            <span class="tag-name">Added on</span>
+            <span class="tag-value">Thursday, October 17th, 2019</span>
+          </span>
+        </div>
+      </a>
+      <a
+        href="https://hackernoon.com/5-emerging-programming-languages-with-a-bright-future-11p3xo9"
+      >
+        <h1>hackernoon.com</h1>
+        <h2>5 Emerging Programming Languages With a Bright Future</h2>
+        <p>
+          When it comes to the project and its realization, you should take into
+          consideration lots of aspects. And the choice of the technology stack
+          is one of the crucial things that can define how successful and smooth
+          your project will be. Depending on the idea and requirements of your
+          application, site or product, you may find and select a proper
+          programming language (PL).
+        </p>
+        <div class="tags">
+          <span class="tag">
+            <span class="tag-name">Added on</span>
+            <span class="tag-value">Monday, October 21th, 2019</span>
+          </span>
+        </div>
+      </a>
+      <a href="https://youtu.be/XpDsk374LDE">
+        <h1>YouTube | Elm Europe</h1>
+        <h2>Elm Europe 2017 - Evan Czaplicki - The life of a file</h2>
+        <div class="tags">
+          <span class="tag">
+            <span class="tag-name">Added on</span>
+            <span class="tag-value">Tuesday, October 22th, 2019</span>
+          </span>
+        </div>
+      </a>
+    </main>
+  </body>
+</html>
