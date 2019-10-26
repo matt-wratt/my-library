@@ -1,0 +1,13 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
