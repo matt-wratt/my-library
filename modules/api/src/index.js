@@ -1,18 +1,28 @@
 const Hapi = require('@hapi/hapi')
+const Inert = require('@hapi/inert')
+const fs = require('fs')
+const Path = require('path')
 
-const host = 'localhost'
-const port = '8086'
-const server = Hapi.server({ host, port })
+boot()
 
-const method = 'get'
-const path = '/'
+async function boot() {
+  const host = 'localhost'
+  const port = '8086'
+  const server = Hapi.server({ host, port })
 
-server.route({ method, path, handler })
+  await server.register(Inert)
 
-server
-  .start()
-  .then(() => console.log(`Server listening on http://${host}:${port}`))
+  const method = 'get'
+  const path = '/{path*}'
 
-function handler(request, h) {
-  return 'Hello World!'
+  server.route({
+    method,
+    path,
+    handler: {
+      file: Path.join(__dirname, '../public/index.html'),
+    },
+  })
+
+  await server.start()
+  console.log(`Server listening on http://${host}:${port}`)
 }
