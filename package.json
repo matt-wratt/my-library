@@ -1,0 +1,12 @@
+{
+  "name": "my-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:matt-wratt/my-library.git",
+  "author": "Matthew Wratt <mw@trineo.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "modules/*"
+  ]
+}
